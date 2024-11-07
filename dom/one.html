@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="head" class="info">
+     <div class="parent">
+        <p class="child">one</p>
+        <p class="child">two</p>
+        <p class="child">Three</p>
+        <p class="child">Four</p>
+    </div>
+   
+</body>
+<script>
+    const parent = document.querySelector(".parent");
+    // console.log(parent.children[0].innerText);
+    // console.log(parent.firstElementChild)
+    // console.log(parent.lastElementChild)
+    // console.log(parent.childNodes)
+
+    const newElement = document.createElement('div');
+    const  child = document.createElement('p');
+    child.innerHTML = 'Hello World';
+    child.setAttribute("style", 'color:red')
+    console.log(child)
+    newElement.appendChild(child)
+    parent.appendChild(newElement)
+
+
+</script>
+</html>
