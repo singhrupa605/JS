@@ -11,13 +11,26 @@
         <p class="child">one</p>
         <p class="child">two</p>
         <p class="child">Three</p>
-        <p class="child">Four</p>
+        <p class="child" id="4">Four <span style="display: none;"> Hello</span></p>
+        <ul>
+            <li>apple</li>
+            <li>
+                banana
+            </li>
+            <li>orange</li>
+        </ul>
     </div>
    
 </body>
 <script>
-    const parent = document.querySelector(".parent");
-
-
+    // const parent = document.querySelector(".parent");
+    // const val = document.getElementById('4')
+    // console.log(val.innerText ,  "\n" ,  val.textContent )
+    // const list = document.querySelectorAll('li')
+    // list[0].style.color="green"
+    // list.forEach(val=>val.style.color = "red")
+    const children = document.getElementsByClassName("child")
+   
+   const arr = Array.from(children).forEach(val=>val.setAttribute("style", "color:orange"))
 </script>
 </html>
