@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure</title>
+</head>
+
+<body>
+    <button id="one">Orange</button>
+    <button id="two">Green</button>
+</body>
+<script>
+
+    function handleClick(color) {
+
+
+           return function changeColor()
+           {
+             document.body.style.backgroundColor = color
+           }
+      
+    }
+
+    // document.getElementById("one").addEventListener("click", (e)=>
+    //     {
+    //     handleClick("orange")
+    // })  //works
+
+      ///  document.getElementById("one").onclick = handleClick // doesnt work
+
+      document.getElementById("one").onclick = handleClick("orange")
+      document.getElementById("two").onclick = handleClick("green")
+
+
+</script>
+
+</html>
