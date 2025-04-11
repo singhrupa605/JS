@@ -1,0 +1,53 @@
+
+
+@import "mixin", "variables";
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+}
+
+
+.main_header
+{
+   @include flex-proops(10px);  
+  width: 100vw;
+  height: 100vh;
+//   display: grid;
+//   place-items:center;
+  background-color: $bg-color;
+  font-size: 2rem + 2rem;
+
+
+  h1
+{
+    color:$fontcolor;
+     &:hover{
+         color: black;
+     }
+     &::shadow
+     {
+        color: white;
+     }
+}
+p
+{
+    color:  $fontcolor
+}
+}
+
+
+
+
+
+//Operators
+//Variables
+//Nesting
+//Mixin
+//Partials
